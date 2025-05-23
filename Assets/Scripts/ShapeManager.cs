@@ -37,4 +37,6 @@ public class ShapeManager : MonoBehaviour
             ShapeCompleted.Invoke();
         }
     }
+
+    
 }

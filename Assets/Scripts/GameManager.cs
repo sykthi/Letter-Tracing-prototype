@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject endpannel;
 
     public static GameManager instance;
-
+    internal bool isPaused = false;
 
     private int currentShapeIndex = 0;
 
@@ -77,5 +77,20 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit");
+    }
+
+    public void TogglePause()
+    {
+        isPaused = !isPaused;
+        //if(isPaused == false)
+        //{
+        //    ShapeFillController.FindObjectOfType<ShapeFillController>().enabled = false;
+        //    isPaused = true;
+        //}
+        //else if(isPaused)
+        //{
+        //    ShapeFillController.FindObjectOfType<ShapeFillController>().enabled = true;
+        //    isPaused = false;
+        //}
     }
 }

@@ -40,7 +40,7 @@ public class ShapeFillController : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(0) && isDrawing)
+        if (Input.GetMouseButton(0) && isDrawing && !GameManager.instance.isPaused)
         {
             UpdateFill();
         }
